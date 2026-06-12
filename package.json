@@ -1,0 +1,34 @@
+{
+  "author": "Luiz Carlos Lima",
+  "bugs": {
+    "url": "https://github.com/developer-luizcarlos/password-generator-web-app/issues"
+  },
+  "dependencies": {
+    "@types/node": "^25.9.3"
+  },
+  "description": "A web password generator",
+  "devDependencies": {
+    "ts-loader": "^9.6.0",
+    "typescript": "^6.0.3",
+    "webpack": "^5.107.2",
+    "webpack-cli": "^7.0.3"
+  },
+  "homepage": "https://github.com/developer-luizcarlos/password-generator-web-app#readme",
+  "keywords": [
+    "web-app",
+    "typescript"
+  ],
+  "license": "ISC",
+  "name": "password-generator",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developer-luizcarlos/password-generator-web-app.git"
+  },
+  "scripts": {
+    "start": "npx webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}
