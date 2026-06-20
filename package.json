@@ -4,7 +4,9 @@
     "url": "https://github.com/developer-luizcarlos/password-generator-web-app/issues"
   },
   "dependencies": {
-    "@types/node": "^25.9.3"
+    "@types/lodash": "^4.17.24",
+    "@types/node": "^25.9.3",
+    "lodash": "^4.18.1"
   },
   "description": "A web password generator",
   "devDependencies": {

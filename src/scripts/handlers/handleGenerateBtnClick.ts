@@ -1,5 +1,6 @@
 import elements from "../dom/elements";
 import utils from "../utils/utils";
+import generatePassword from "../generatePassword";
 import openNotificationDialog from "../dom/openNotificationDialog";
 
 export default function handleGenerateBtnClick(): void {
@@ -19,5 +20,23 @@ export default function handleGenerateBtnClick(): void {
     elements.inputQuantity!.focus();
 
     return;
+  }
+
+  try {
+    const options = {
+      includeSymbols: elements.toggleSymbol!.checked,
+      includeNumbers: elements.toggleNumbers!.checked,
+      includeLowerCase: elements.toggleLowercase!.checked,
+      includeUpperCase: elements.toggleUppercase!.checked,
+    };
+
+    const passwordLength = +elements.inputQuantity!.value;
+    const password = generatePassword(passwordLength, options);
+
+    elements.generatedOutput!.textContent = password;
+  } catch (error) {
+    if (error instanceof Error) {
+      openNotificationDialog(error.message);
+    }
   }
 }

@@ -10,11 +10,19 @@ const generatedOutput = document.querySelector<HTMLOutputElement>(
 );
 const notificationDialog =
   document.querySelector<HTMLDialogElement>(".notification");
-const toggles = document.querySelectorAll(".toggle");
-const toggleSymbol = document.querySelector(".toggle__checkbox--symbols");
-const toggleNumbers = document.querySelector(".toggle__checkbox--numbers");
-const toggleLowercase = document.querySelector(".toggle__checkbox--lowercase");
-const toggleUppercase = document.querySelector(".toggle__checkbox--uppercase");
+const toggles = document.querySelectorAll<HTMLInputElement>(".toggle");
+const toggleSymbol = document.querySelector<HTMLInputElement>(
+  ".toggle__checkbox--symbols",
+);
+const toggleNumbers = document.querySelector<HTMLInputElement>(
+  ".toggle__checkbox--numbers",
+);
+const toggleLowercase = document.querySelector<HTMLInputElement>(
+  ".toggle__checkbox--lowercase",
+);
+const toggleUppercase = document.querySelector<HTMLInputElement>(
+  ".toggle__checkbox--uppercase",
+);
 
 const elements = {
   checkboxes,
