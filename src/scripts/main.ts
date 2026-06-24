@@ -1,16 +1,14 @@
-import elements from "./dom/elements";
-import handlers from "./handlers/handlers";
+import { generateBtn, notificationBtn, toggles } from "./dom/elements";
+import {
+  handleGenerateBtnClick,
+  handleNotificationBtnClick,
+  handleToggleClick,
+} from "./handlers/handlers";
 
-elements.generateBtn!.addEventListener(
-  "click",
-  handlers.handleGenerateBtnClick,
-);
+generateBtn!.addEventListener("click", handleGenerateBtnClick);
 
-elements.notificationBtn!.addEventListener(
-  "click",
-  handlers.handleNotificationBtnClick,
-);
+notificationBtn!.addEventListener("click", handleNotificationBtnClick);
 
-elements.toggles.forEach((element) => {
-  element.addEventListener("click", handlers.handleToggleClick);
+toggles.forEach((element) => {
+  element.addEventListener("click", handleToggleClick);
 });

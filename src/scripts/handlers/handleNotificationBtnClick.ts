@@ -1,8 +1,8 @@
 import closeNotificationDialog from "../dom/closeNotificationDialog";
-import utils from "../utils/utils";
+import { isNotificationDialogOpen } from "../utils/utils";
 
 export default function handleNotificationBtnClick(): void {
-  if (!utils.isNotificationDialogOpen()) {
+  if (!isNotificationDialogOpen()) {
     return;
   }
 

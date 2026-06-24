@@ -3,11 +3,9 @@ import isEmptyString from "./isEmptyString";
 import isInputQuantityValueValid from "./isInputQuantityValueValid";
 import isNotificationDialogOpen from "./isNotificationDialogOpen";
 
-const utils = {
+export {
   isAnyCheckboxChecked,
   isEmptyString,
   isInputQuantityValueValid,
   isNotificationDialogOpen,
 };
-
-export default utils;

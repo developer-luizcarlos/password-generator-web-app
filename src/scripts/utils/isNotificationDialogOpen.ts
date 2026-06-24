@@ -1,5 +1,5 @@
-import elements from "../dom/elements";
+import { notificationDialog } from "../dom/elements";
 
 export default function isNotificationDialogOpen(): boolean {
-  return elements.notificationDialog!.hasAttribute("open");
+  return notificationDialog!.hasAttribute("open");
 }

@@ -1,42 +1,26 @@
-const checkboxes = document.querySelectorAll(".toggle__checkbox");
-const copyBtn = document.querySelector<HTMLButtonElement>(".btn--copy");
-const generateBtn = document.querySelector<HTMLButtonElement>(".btn--generate");
-const notificationBtn =
+export const checkboxes = document.querySelectorAll(".toggle__checkbox");
+export const copyBtn = document.querySelector<HTMLButtonElement>(".btn--copy");
+export const generateBtn =
+  document.querySelector<HTMLButtonElement>(".btn--generate");
+export const notificationBtn =
   document.querySelector<HTMLButtonElement>(".btn--notification");
-const inputQuantity =
+export const inputQuantity =
   document.querySelector<HTMLInputElement>(".input--quantity");
-const generatedOutput = document.querySelector<HTMLOutputElement>(
+export const generatedOutput = document.querySelector<HTMLOutputElement>(
   ".output-generated-password",
 );
-const notificationDialog =
+export const notificationDialog =
   document.querySelector<HTMLDialogElement>(".notification");
-const toggles = document.querySelectorAll<HTMLInputElement>(".toggle");
-const toggleSymbol = document.querySelector<HTMLInputElement>(
+export const toggles = document.querySelectorAll<HTMLInputElement>(".toggle");
+export const toggleSymbol = document.querySelector<HTMLInputElement>(
   ".toggle__checkbox--symbols",
 );
-const toggleNumbers = document.querySelector<HTMLInputElement>(
+export const toggleNumbers = document.querySelector<HTMLInputElement>(
   ".toggle__checkbox--numbers",
 );
-const toggleLowercase = document.querySelector<HTMLInputElement>(
+export const toggleLowercase = document.querySelector<HTMLInputElement>(
   ".toggle__checkbox--lowercase",
 );
-const toggleUppercase = document.querySelector<HTMLInputElement>(
+export const toggleUppercase = document.querySelector<HTMLInputElement>(
   ".toggle__checkbox--uppercase",
 );
-
-const elements = {
-  checkboxes,
-  copyBtn,
-  generateBtn,
-  notificationBtn,
-  inputQuantity,
-  generatedOutput,
-  notificationDialog,
-  toggles,
-  toggleSymbol,
-  toggleNumbers,
-  toggleLowercase,
-  toggleUppercase,
-};
-
-export default elements;

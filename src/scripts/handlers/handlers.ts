@@ -2,10 +2,8 @@ import handleGenerateBtnClick from "./handleGenerateBtnClick";
 import handleNotificationBtnClick from "./handleNotificationBtnClick";
 import handleToggleClick from "./handleToggleClick";
 
-const handlers = {
+export {
   handleGenerateBtnClick,
   handleNotificationBtnClick,
   handleToggleClick,
 };
-
-export default handlers;

@@ -1,7 +1,7 @@
-import elements from "../dom/elements";
+import { checkboxes } from "../dom/elements";
 
 export default function isAnyCheckboxChecked(): boolean {
-  const checkboxes = [...elements.checkboxes] as HTMLInputElement[];
+  const checkboxesEl = [...checkboxes] as HTMLInputElement[];
 
-  return checkboxes.some((element) => element.checked);
+  return checkboxesEl.some((element) => element.checked);
 }

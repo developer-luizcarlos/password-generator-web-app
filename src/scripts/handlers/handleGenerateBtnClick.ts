@@ -1,10 +1,20 @@
-import elements from "../dom/elements";
-import utils from "../utils/utils";
+import {
+  inputQuantity,
+  generatedOutput,
+  toggleLowercase,
+  toggleNumbers,
+  toggleSymbol,
+  toggleUppercase,
+} from "../dom/elements";
+import {
+  isAnyCheckboxChecked,
+  isInputQuantityValueValid,
+} from "../utils/utils";
 import generatePassword from "../generatePassword";
 import openNotificationDialog from "../dom/openNotificationDialog";
 
 export default function handleGenerateBtnClick(): void {
-  if (!utils.isAnyCheckboxChecked()) {
+  if (!isAnyCheckboxChecked()) {
     openNotificationDialog(
       "Select a type of character to include in the generated password",
     );
@@ -12,28 +22,28 @@ export default function handleGenerateBtnClick(): void {
     return;
   }
 
-  if (!utils.isInputQuantityValueValid()) {
+  if (!isInputQuantityValueValid()) {
     openNotificationDialog(
       "Insert as the password characters quantity a value between 4 and 16",
     );
 
-    elements.inputQuantity!.focus();
+    inputQuantity!.focus();
 
     return;
   }
 
   try {
     const options = {
-      includeSymbols: elements.toggleSymbol!.checked,
-      includeNumbers: elements.toggleNumbers!.checked,
-      includeLowerCase: elements.toggleLowercase!.checked,
-      includeUpperCase: elements.toggleUppercase!.checked,
+      includeSymbols: toggleSymbol!.checked,
+      includeNumbers: toggleNumbers!.checked,
+      includeLowerCase: toggleLowercase!.checked,
+      includeUpperCase: toggleUppercase!.checked,
     };
 
-    const passwordLength = +elements.inputQuantity!.value;
+    const passwordLength = +inputQuantity!.value;
     const password = generatePassword(passwordLength, options);
 
-    elements.generatedOutput!.textContent = password;
+    generatedOutput!.textContent = password;
   } catch (error) {
     if (error instanceof Error) {
       openNotificationDialog(error.message);
